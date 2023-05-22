@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Command interpreter for Holberton AirBnB project."""
+"""command line interface for one"""
 
 import cmd
 import json
