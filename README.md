@@ -11,7 +11,7 @@ ALU-AirBnB is a full-stack Web application built from scratch which comprize a c
 - An API that provides a communication interface between the front and backend of the system.
 
 ## Installation
-* Clone this repository: `git clone "https://github.com/alexaorrico/AirBnB_clone.git"`
+* Clone this repository: `git clone "https://github.com/FrankOnyemaOrji/AirBnB_clone.git"`
 * Access AirBnb directory: `cd AirBnB_clone`
 * Run hbnb(interactively): `./console` and enter command
 * Run hbnb(non-interactively): `echo "<command>" | ./console.py`
