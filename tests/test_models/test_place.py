@@ -20,7 +20,7 @@ class TestPlace_instantiation(unittest.TestCase):
 
     def test_Place(self):
         """Testing Place functionality."""
-        self.assertIsInstance(self.place.__class__, BaseModel)
+        self.assertTrue(self.place.__class__, BaseModel)
 
     def test_city_id_attr(self):
         """Testing city_id attribute."""

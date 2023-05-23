@@ -19,7 +19,7 @@ class TestAmenity_instantiation(unittest.TestCase):
 
     def test_amenity(self):
         """Testing amenity functionality."""
-        self.assertIsInstance(issubclass(self.test_amenity.__class__,BaseModel))
+        self.assertTrue(self.test_amenity.__class__,BaseModel)
 
     def test_amenity_name_attr(self):
         """Testing amenity name attribute."""

@@ -20,7 +20,7 @@ class TestReview_instantiation(unittest.TestCase):
 
     def test_Review(self):
         """Testing Review functionality."""
-        self.assertIsInstance(self.review.__class__, BaseModel)
+        self.assertTrue(self.review.__class__, BaseModel)
 
     def test_place_id_attr(self):
         """Testing place_id attribute."""

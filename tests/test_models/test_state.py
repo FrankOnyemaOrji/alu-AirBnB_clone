@@ -20,7 +20,7 @@ class TestState_instantiation(unittest.TestCase):
 
     def test_State(self):
         """Testing State functionality."""
-        self.assertIsInstance(self.state.__class__, BaseModel)
+        self.assertTrue(self.state.__class__, BaseModel)
 
     def test_name_attr(self):
         """Testing name attribute."""

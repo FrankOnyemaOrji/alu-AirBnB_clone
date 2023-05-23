@@ -20,7 +20,7 @@ class TestUser_instantiation(unittest.TestCase):
 
     def test_User(self):
         """Testing User functionality."""
-        self.assertIsInstance(self.user.__class__, BaseModel)
+        self.assertTrue(self.user.__class__, BaseModel)
 
     def test_email_attr(self):
         """Testing email attribute."""

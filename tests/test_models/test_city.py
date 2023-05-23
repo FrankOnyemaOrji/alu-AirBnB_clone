@@ -17,9 +17,9 @@ class TestCity_instantiation(unittest.TestCase):
         """Sets up testing environment."""
         self.test_city = City()
 
-    def test_City(self):
+    def test_state_id(self):
         """Testing city functionality."""
-        self.assertIsInstance(self.test_City.state_id, str)
+        self.assertIsInstance(self.test_city.state_id, str)
 
     def test_city_name(self):
         """Testing city name attribute."""
