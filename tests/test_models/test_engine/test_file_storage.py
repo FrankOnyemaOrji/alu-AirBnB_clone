@@ -132,14 +132,16 @@ class TestFileStorage_methods(unittest.TestCase):
         models.storage.new(rv)
         models.storage.new(am)
         models.storage.save()
+        save_text = ""
         with open("storage.json", "r") as f:
-            self.assertIn("BaseModel." + bm.id, f.read())
-            self.assertIn("User." + us.id, f.read())
-            self.assertIn("State" + st.id, f.read())
-            self.assertIn("City." + ct.id, f.read())
-            self.assertIn("Place." + pl.id, f.read())
-            self.assertIn("Review." + rv.id, f.read())
-            self.assertIn("Amenity." + am.id, f.read())
+            save_text = f.read()
+            self.assertIn("BaseModel." + bm.id, save_text)
+            self.assertIn("User." + us.id, save_text)
+            self.assertIn("State." + st.id, save_text)
+            self.assertIn("Place." + pl.id, save_text)
+            self.assertIn("City." + ct.id, save_text)
+            self.assertIn("Amenity." + am.id, save_text)
+            self.assertIn("Review." + rv.id, save_text)
 
     def test_save_with_arg(self):
         """Test that save() takes one argument."""
