@@ -45,7 +45,7 @@ class TestHBNBCommand_help(unittest.TestCase):
 
     def test_help_create(self):
         h = ("Usage: create <class>\n        "
-             "create a new class instance and print its id.")
+             "Create a new class instance and print its id.")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help create"))
             self.assertEqual(h, output.getvalue().strip())
