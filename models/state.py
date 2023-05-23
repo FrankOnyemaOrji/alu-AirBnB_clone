@@ -8,3 +8,7 @@ class State(BaseModel):
     """Class that manages state objects"""
 
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        """Instantiates a State object"""
+        super().__init__(*args, **kwargs)
