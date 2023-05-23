@@ -2,12 +2,11 @@
 """
 Parent class to all classes in the AirBnB clone project
 """
+
+
 from datetime import datetime
 from uuid import uuid4
 import models
-
-
-
 
 class BaseModel():
     """Parent class for AirBnB clone project
@@ -73,4 +72,4 @@ class BaseModel():
         dic["created_at"] = self.created_at.isoformat()
         dic["updated_at"] = self.updated_at.isoformat()
         dic["__class__"] = self.__class__.__name__
-        return dic    
+        return dic
