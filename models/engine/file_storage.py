@@ -31,21 +31,19 @@ class FileStorage:
     def all(self):
         return self.__objects
 
-   
+
     def new(self, obj):
         """Add obj with key <obj class name>.id to dictionary.
-
         Args:
-
         obj: the object with key <obj class name>.id
         """
         key = obj.__class__.__name__ + '.' + obj.id
         
         self.__objects[key] = obj
 
-    
+
     def save(self):
-        """ Serializes __objects to the JSON file (path: __file_path)."""
+        """Serializes __objects to the JSON file (path: __file_path)."""
         json_obj = {}
         for key in self.__objects.keys():
             json_obj[key] = self.__objects[key].to_dict()
@@ -59,8 +57,6 @@ class FileStorage:
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as json_file:
                 json_obj = json.load(json_file)
-                for key in json_obj.keys():
-
-                    
+                for key in json_obj.keys():             
                     self.__objects[key] = eval(
                         json_obj[key]['__class__'])(**json_obj[key])

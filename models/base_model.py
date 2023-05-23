@@ -36,13 +36,13 @@ class BaseModel:
             self.updated_at = self.created_at
             models.storage.new(self)
         else:
-            for key, value in kwargs.items():
+            for key, v in kwargs.items():
                 if key in ["created_at", "updated_at"]:
-                    self.__dict__[key] = datetime.strptime(value, DATE_TIME_FORMAT)
+                    self.__dict__[key] = datetime.strptime(v, DATE_TIME_FORMAT)
                 elif key[0] == "id":
-                    self.__dict__[key] = str(value)
+                    self.__dict__[key] = str(v)
                 else:
-                    self.__dict__[key] = value
+                    self.__dict__[key] = v
 
     def __str__(self):
         """returns string representation of class instance
@@ -51,7 +51,7 @@ class BaseModel:
         """
         return "[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__)
-    
+
     def save(self):
         """updates attribute updated_at with current datetime"""
         self.updated_at = datetime.now()
